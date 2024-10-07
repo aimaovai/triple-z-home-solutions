@@ -1,18 +1,19 @@
 'use client';
 import React from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import styles from './header.css';
-import logo from "../../../../public/images/logo_1.png";
-import { usePathname } from "next/navigation";
+import logo from "../../../public/images/logo_1.png";
+// import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 
+
 export default function Header() {
-    const pathName = usePathname();
-    const isActive = (path) => path === pathName;
-    const [nav, setNav] = useState(false);
-    const onClick = () => setNav(!nav);
+    // const pathName = usePathname();
+    // const isActive = (path) => path === pathName;
+    // const [nav, setNav] = useState(false);
+    // const onClick = () => alert("Coming Soon!");
     const links = [
         {
             name: "Home",
@@ -36,9 +37,9 @@ export default function Header() {
         }
     ]
     return (
-        <nav class="nav">
-            <div class="top-nav"></div>
-            <div class="nav-container">
+        <nav className={styles.nav}>
+            <div className="top_nav"></div>
+            <div className="nav_container">
                 <Image
                     src={logo}
                     height={76}
@@ -47,8 +48,11 @@ export default function Header() {
                 />
                 <div>
                     {links.map((link) => (
-                        <Link key={link.name} href={link.path} class="li">{link.name}</Link>
+                        <Link key={link.name} href={link.path} className="li">{link.name}</Link>
                     ))}
+                </div>
+                <div>
+                    <button className="nav-btn">Get a quote</button>
                 </div>
                 {/* <button class="nav-btn">Get a quote</button> */}
             </div>
