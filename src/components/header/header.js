@@ -1,61 +1,82 @@
-'use client';
+"use client";
 import React from "react";
-// import { useState } from "react";
-import styles from './header.css';
+import { useState } from "react";
 import logo from "../../../public/images/logo_1.png";
-// import { usePathname } from "next/navigation";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
-
-
+import styles from "./header.module.css";
 
 export default function Header() {
-    // const pathName = usePathname();
-    // const isActive = (path) => path === pathName;
-    // const [nav, setNav] = useState(false);
-    // const onClick = () => alert("Coming Soon!");
-    const links = [
-        {
-            name: "Home",
-            path: "/home"
-        },
-        {
-            name: "About",
-            path: "/about"
-        },
-        {
-            name: "Contact Us",
-            path: "/contact-us"
-        },
-        {
-            name: "Services",
-            path: "/services"
-        },
-        {
-            name: "Portfolio",
-            path: "/portfolio"
-        }
-    ]
-    return (
-        <nav className={styles.nav}>
-            <div className="top_nav"></div>
-            <div className="nav_container">
-                <Image
-                    src={logo}
-                    height={76}
-                    width={84}
-                    alt="logo"
-                />
-                <div>
-                    {links.map((link) => (
-                        <Link key={link.name} href={link.path} className="li">{link.name}</Link>
-                    ))}
-                </div>
-                <div>
-                    <button className="nav-btn">Get a quote</button>
-                </div>
-                {/* <button class="nav-btn">Get a quote</button> */}
-            </div>
-        </nav>
-    );
+  const [nav, setNav] = useState(false);
+  const onClick = () => alert("Coming Soon!");
+  const links = [
+    {
+      name: "Home",
+      path: "/",
+    },
+    {
+      name: "About",
+      path: "/about",
+    },
+    {
+      name: "Contact Us",
+      path: "/contact-us",
+    },
+    {
+      name: "Services",
+      path: "/services",
+    },
+    {
+      name: "Portfolio",
+      path: "/portfolio",
+    },
+  ];
+  return (
+    <nav className={styles.nav}>
+      {/* Top navigation bar section */}
+      <div className={styles["top_nav"]}></div>
+
+      {/* Main container for navigation */}
+      <div className={styles["nav_container"]}>
+        {/* Logo */}
+        <Image
+          src={logo}
+          height={76}
+          width={84}
+          alt="logo"
+          className="responsive-image"
+        />
+
+     
+
+        <div className={styles["burger-menu-container"]}>
+          {/* Hamburger Icon - Visible only on mobile */}
+          <div className={styles["hamburger"]}>
+            {!nav ? (
+              <FaBars onClick={() => setNav(!nav)} />
+            ) : (
+              <FaTimes onClick={() => setNav(!nav)} />
+            )}
+          </div>
+          {/* Mobile Menu - Visible only on small screens */}
+          {/* `${styles["header-links-container"]} ${styles["block"]} ${styles["md:hidden"]}` : styles["hidden"]*/}
+          <div className={nav ? `${styles["mobile-menu"]}` : styles["hidden"]}>
+            {links.map((link) => (
+              <Link key={link.name} href={link.path} className={styles.li}>
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Get a Quote button */}
+        <div>
+          <button className={styles["quote-btn"]} onClick={onClick}>
+            Get a quote
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
 }

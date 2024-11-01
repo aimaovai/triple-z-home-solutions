@@ -1,10 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
 :root {
   --background: #FBF7F4;
   --foreground: #000000;
+  --footer-height: 180px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +22,7 @@ body {
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   flex: 1;
+  margin-bottom: var(--footer-height);
 }
 
 .header {
@@ -29,34 +32,138 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* height: 100px; */
-  /* width: 80%; */
   margin: 2% 10%;
-  /* background: rgb(255, 255, 255); */
-  /* border: 1px solid rgb(255, 255, 255); */
-  /* color: rgb(0, 0, 0); */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-
+  
 }
 
 .title {
   font-weight: 400;
-  font-size: 2rem;
+  font-size: xxx-large;
   font-style: normal;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
   width: 100%;
-  /* margin: 2% 10%; */
   background: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.h2{
+  font-size: xx-large;
+  font-style: italic;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: x-large;
+  width: 100%;
+  text-align: left;
+}
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    font-size: 3.5rem;
+    margin: 4% 8%;
+  }
+
+  .title {
+    font-size: xx-large;
+    height: 80px;
+  }
+
+  .h2 {
+    font-size: x-large;
+  }
+
+  .location-grid {
+    font-size: large;
+  }
+}
+
+/* Small Screens (Phones, 480px to 767px) */
+@media (max-width: 768px) {
+  .header {
+    font-size: 3rem;
+    margin: 5% 5%;
+  }
+
+  .title {
+    font-size: x-large;
+    height: 70px;
+  }
+
+  .h2 {
+    font-size: large;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    font-size: medium;
+  }
+}
+
+/* Extra Small Screens (Phones, less than 480px) */
+@media (max-width: 480px) {
+  .header {
+    font-size: 2.5rem;
+    margin: 5% 3%;
+  }
+
+  .title {
+    font-size: large;
+    height: 60px;
+  }
+
+  .h2 {
+    font-size: medium;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    font-size: small;
+  }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .header {
+    font-size: 2rem;
+    margin: 5% 2%;
+  }
+
+  .title {
+    font-size: medium;
+    height: 50px;
+  }
+
+  .h2 {
+    font-size: small;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    font-size: small;
   }
 }
