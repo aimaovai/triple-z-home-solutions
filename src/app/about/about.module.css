@@ -1,8 +1,43 @@
 .container {
     height: 100%;
     width: 80%;
-    margin: 10px 10%;
-    background-color: white;
-    border: 1px solid black;
+    margin: 20px 10%;
+    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* border: 1px solid black; */
     white-space: pre-wrap;
+}
+
+.title {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.p1 {
+    text-align: justify;
+    width: 90%;
+    font-size: medium;
+    line-height: 1.5;
+}
+
+.p2 {
+    text-align: justify;
+    width: 100%;
+    font-size: medium;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.responsive_image {
+    object-fit: contain; /* Ensures the image covers the area while maintaining aspect ratio */
+    /* align-self: center; */
+  }
+
+.bullet {
+    color: black;
+    margin-left: 25px;
+    text-indent: -21px;
+    /* line-height: 1.5; */
 }

@@ -20,7 +20,7 @@ export default function Header() {
       path: "/about",
     },
     {
-      name: "Contact Us",
+      name: "Contact",
       path: "/contact-us",
     },
     {
@@ -48,7 +48,14 @@ export default function Header() {
           className="responsive-image"
         />
 
-     
+        {/* Header links - Hidden on mobile */}
+        <div className={`${styles["main-nav-links"]}`}>
+          {links.map((link) => (
+            <Link key={link.name} href={link.path} className={styles.li}>
+              {link.name}
+            </Link>
+          ))}
+        </div>
 
         <div className={styles["burger-menu-container"]}>
           {/* Hamburger Icon - Visible only on mobile */}

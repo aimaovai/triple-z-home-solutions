@@ -59,9 +59,9 @@ export default function Footer() {
           >
             Company
           </div>
-          <div className={styles["footer-li"]}>About Us</div>
-          <div className={styles["footer-li"]}>Contact</div>
-          <div className={styles["footer-li"]}>Portfolio</div>
+          <div className={styles["footer-li"]}><a href="#">About Us</a></div>
+          <div className={styles["footer-li"]}><a href="#">Contact</a></div>
+          <div className={styles["footer-li"]}><a href="#">Portfolio</a></div>
         </div>
 
         {/* Legal Links */}
@@ -76,9 +76,9 @@ export default function Footer() {
           >
             Legal
           </div>
-          <div className={styles ["footer-li"]}>Legal Notice</div>
-          <div className={styles ["footer-li"]}>Terms</div>
-          <div className={styles ["footer-li"]}>Privacy</div>
+          <div className={styles ["footer-li"]}><a href="#">Legal Notice</a></div>
+          <div className={styles ["footer-li"]}><a href="#">Terms</a></div>
+          <div className={styles ["footer-li"]}><a href="#">Privacy</a></div>
         </div>
         </div>
       </div>
