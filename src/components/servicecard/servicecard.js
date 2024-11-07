@@ -1,17 +1,16 @@
 import React from "react";
-import Image from "next/image";
 import styles from "./servicecard.module.css";
+import ServiceImage from "../serviceimage/serviceimage.js";
 
-export default function ServiceCard({ src}) {
+export default function ServiceCard({ src, description }) {
   return (
-    <div className={styles.imageContainer}>
-      <Image
-        src={src} // Replace with your image path
-        alt="Descriptive Alt Text" // Describe the image
-        width={250} // Original width of the image
-        height={250} // Original height of the image
-        className={styles.responsiveImage} // Optional custom class
-      />
+    <div className={styles.container}>
+      <div className={styles.image}><ServiceImage src={src} /></div>
+      <div className={styles.text}>
+        <p>
+          {description}
+        </p>
+      </div>
     </div>
   );
 }
