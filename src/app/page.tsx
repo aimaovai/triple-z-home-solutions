@@ -1,73 +1,65 @@
 "use client";
-import Image from "next/image";
+
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer.js";
+import MarqueeCard from "../components/marqueecard/marqueecaard.js";
+import ServiceCard from "../components/servicecard/servicecard.js";
 
 export default function Home() {
   const locations = [
-    "Richmond",
-    "Houston",
-    "Katy",
-    "Sugarland",
-    "Rosenburg",
-    "Missouri City",
+    "Richmond, Tx",
+    "Missouri City, Tx",
+    "Houston, Tx",
+    "Rosenburg, Tx",
+    "Katy, Tx",
+    "Sugarland, Tx",
   ];
   return (
     <div className="body">
       <Header />
       <div>
-        <div className="header">
+        <div className="content-body">
           <div className="title">Triple Z Home Solutions</div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              marginTop: "30px",
-            }}
-          >
-            <Image
-              src={"/images/before.png"}
-              alt="before"
-              width={500}
-              height={500}
-              style={{ marginRight: "20px" }}
-              className="images"
-            />
-            <Image
-              src={"/images/after.png"}
-              alt="before"
-              width={500}
-              height={500}
-              style={{ marginLeft: "20px" }}
-              className="images"
-            />
+          <div className="marquee">
+            <div>
+              <span>
+                <MarqueeCard src={"/images/marquee/curtains_before.jpg"} />
+              </span>
+              <span>
+                <MarqueeCard src={"/images/marquee/curtains_after.jpg"} />
+              </span>
+              <span>
+                <MarqueeCard src={"/images/marquee/theater_before.jpg"} />
+              </span>
+              <span>
+                <MarqueeCard src={"/images/marquee/theater_after.jpg"} />
+              </span>
+              <span>
+                <MarqueeCard src={"/images/marquee/chand_before.jpg"} />
+              </span>
+              <span>
+                <MarqueeCard src={"/images/marquee/chand_after.jpg"} />
+              </span>
+            </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "center",
-              marginTop: "30px",
-            }}
-          >
-            <h2 className="h2 mea-culpa-regular">Do more with Us!</h2>
+          <div className="section">
+            <div>
+              <h2 className="h2">Featured Services</h2>
+            </div>
+            <div className="service-grid">
+              <ServiceCard src={"/images/featured-services/hts.png"} />
+              <ServiceCard src={"/images/featured-services/tvmount.png"} />
+              <ServiceCard src={"/images/featured-services/chandinstall.png"} />
+              <ServiceCard src={"/images/featured-services/cabinets.png"} />
+            </div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "left",
-              marginTop: "30px",
-            }}
-          >
-            <div style={{ fontSize: "xx-large" }}>Service Areas</div>
-            <div className="location-grid">
+          <div className="section">
+            <div>
+              <h2 className="h2">Service Areas</h2>
+            </div>
+            <div className="section-grid">
               {locations.map((location) => (
-                <div key={location}>
-                  <li>{location}</li>
-                </div>
+                <div key={location}>{location}</div>
               ))}
             </div>
             <div></div>

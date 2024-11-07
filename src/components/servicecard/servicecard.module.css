@@ -1,0 +1,44 @@
+/* Style the container to control image sizing */
+.imageContainer {
+    max-width: 100%; /* Ensures container width doesn't exceed screen size */
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Optional additional styles for the image itself */
+  .responsiveImage {
+    border-radius: 3px; /* Rounds the corners */
+    height: 100%;
+    object-fit: contain; /* Ensures the image covers the area while maintaining aspect ratio */
+    justify-self: center;
+    align-self: center;
+  }
+  
+  /* Medium Screens (Tablets, 768px to 1024px) */
+  @media (max-width: 1024px) {
+    .image-container {
+      max-width: 100%; /* Reduce max-width on tablets */
+      height: 100%;
+      padding: 15px;
+    }
+    .responsiveImage {
+      /* max-height: 100%; */
+      width: 100%;
+      object-fit: contain; /* Ensures the image covers the area while maintaining aspect ratio */
+    }
+  }
+  /* Very Small Screens (320px and below) */
+  @media (max-width: 320px) {
+    .image-container {
+      max-width: 70%; /* Full width on extremely small screens */
+      max-height: 70%;
+      margin: 5px 0;
+    }
+    .responsiveImage {
+      /* height: 260px; */
+      width: 80%;
+      object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    }
+  }
+  

@@ -25,14 +25,16 @@ body {
   margin-bottom: var(--footer-height);
 }
 
-.header {
+.content-body {
   font-weight: 400;
   font-size: 4rem;
   font-style: normal;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 2% 10%;
+  margin: 30px 0;
+  width: 85%;
+  justify-self: center;
   
 }
 
@@ -52,16 +54,35 @@ body {
 }
 
 .h2{
-  font-size: xx-large;
-  font-style: italic;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serifs;
+  margin-top: 5px;
 }
 
-.location-grid {
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background-color: white;
+}
+.section-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 10px 0;
   font-size: x-large;
   width: 100%;
-  text-align: left;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.service-grid {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+  gap: 10px;
+  height: 300px;
 }
 
 .cedarville-cursive-regular {
@@ -74,6 +95,40 @@ body {
   font-family: "Mea Culpa", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.marquee {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+  /* background: rgb(255, 255, 255, 0.2); */
+  /* border: 1px solid rgb(255, 255, 255); */
+  /* color: rgb(0, 0, 0); */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.marquee div {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  height: 300px;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }
 
 @layer utilities {
@@ -92,12 +147,19 @@ body {
     font-size: xx-large;
     height: 80px;
   }
-
-  .h2 {
-    font-size: x-large;
+  .marquee div {
+    height: 300px;
   }
 
-  .location-grid {
+  .marquee span {
+    height: 400px;
+  }
+
+  .service-grid {
+    height: 200px;
+  }
+
+  .section-grid {
     font-size: large;
   }
 }
@@ -118,7 +180,12 @@ body {
     font-size: large;
   }
 
-  .location-grid {
+  .service-grid {
+    height: 150px;
+    gap: 5px;
+  }
+
+  .section-grid {
     grid-template-columns: 1fr;
     font-size: medium;
   }
@@ -136,13 +203,23 @@ body {
     height: 60px;
   }
 
+  .marquee div {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
   .h2 {
     font-size: medium;
   }
 
-  .location-grid {
+  .section-grid {
     grid-template-columns: 1fr;
     font-size: small;
+  }
+  .service-grid {
+    height: 100px;
+    gap: 5px;
   }
 }
 
@@ -158,12 +235,23 @@ body {
     height: 50px;
   }
 
-  .h2 {
-    font-size: small;
+  .marquee div {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
   }
 
-  .location-grid {
+  .h2 {
+    font-size: medium;
+  }
+
+  .section-grid {
     grid-template-columns: 1fr;
     font-size: small;
+  }
+  .service-grid {
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
   }
 }

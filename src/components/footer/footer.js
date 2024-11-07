@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./footer.module.css";
-import logo from "../../../public/images/logo_1.png";
+import logo from "../../../public/images/logos/logo_1.png";
 import Image from "next/image";
 import { CopyrightOutlined, Facebook, Instagram, Phone } from "@mui/icons-material";
 // import { FaTiktok } from "react-icons/fa";
