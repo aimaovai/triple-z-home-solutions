@@ -39,7 +39,7 @@ export default function About() {
               excellence and precision.
             </p>
             <Image
-              src={"/images/logo_1.png"}
+              src={"/images/logos/logo_1.png"}
               alt="logo"
               width={250}
               height={250}
