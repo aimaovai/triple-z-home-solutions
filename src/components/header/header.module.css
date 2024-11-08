@@ -42,7 +42,7 @@
 
 .li {
   color: rgb(0, 0, 0);
-  font-size: Large;
+  font-size: x-large;
   margin: 20px 4%;
   font-display: block;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -95,6 +95,27 @@
   display: none;
 }
 
+@media (max-width: 1440px) {
+  .li {
+    font-size: x-large;
+  }
+}
+
+@media (max-width: 1290px) {
+    .li {
+        font-size: larger;
+      }
+}
+
+@media (max-width: 1024px) {
+ .li {
+    font-size: large;
+  }
+
+  .quote-btn {
+    font-size: small;
+  }
+}
 /* Medium Screens (Tablets, 768px to 1024px) */
 @media screen and (min-width: 768px) {
   .hidden {
@@ -120,12 +141,12 @@
   .quote-btn {
     height: 40px;
     width: 15%;
-    padding: 5px 15px;
     background-color: rgb(5, 5, 5);
     border-radius: 5px;
     border: 1px solid rgb(5, 5, 5);
     color: white;
     text-align: center;
+    align-content: center;
   }
 
   .header-content {
@@ -188,6 +209,7 @@
     border: 1px solid rgb(5, 5, 5);
     color: white;
     text-align: center;
+    font-size: small;
     align-content: center;
   }
 }

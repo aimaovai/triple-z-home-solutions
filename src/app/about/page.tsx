@@ -27,6 +27,7 @@ export default function About() {
               flexDirection: "row",
               alignItems: "center",
               marginBottom: "10px",
+              justifyContent: "space-between",
             }}
           >
             <p className={styles.p1}>
@@ -47,7 +48,7 @@ export default function About() {
             />
           </div>
           <div>
-            <p>We offer a comprehensive range of services, including:</p>
+            <p className={styles.p1}>We offer a comprehensive range of services, including:</p>
             {/* <ul> */}
               <li className={styles.bullet}>
                   Light Fixture & Fan Installations: Illuminate your space with
