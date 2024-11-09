@@ -37,7 +37,7 @@ export default function Services() {
     },
     {
       src: "/images/services/lights.jpg",
-      service: "Light Fixtures and Fan Istallation",
+      service: "Light Fixtures and Fan Installation",
       description:
         "Brighten and cool your home with Triple Z's Light Fixture and Fan Installation service, designed for comfort and style. Our professionals handle secure mounting, precise wiring, and ideal placement to ensure both safety and a clean, modern look. Enjoy beautifully lit and breezy spaces tailored to your needs!",
     },

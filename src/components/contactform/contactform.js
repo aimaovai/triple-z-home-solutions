@@ -1,11 +1,47 @@
+"use client";
+
 import React from "react";
 import styles from "./contactform.module.css";
 import { Button } from "@mui/material";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("Failed to send message:", error);
+        setStatus("Failed to send message.");
+      });
+  };
   return (
     <div className={styles.container}>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <p>
           Ready to transform your space? Contact Triple Z Home Solutions to
           discuss how we can bring your vision to life with expert renovations
@@ -20,8 +56,8 @@ export default function ContactForm() {
               type="text"
               id="name"
               name="name"
-              // value={formData.name}
-              // onChange={handleChange}
+              value={formData.name}
+              onChange={handleChange}
               required
               className={styles.input}
               aria-label="Enter your name."
@@ -35,8 +71,8 @@ export default function ContactForm() {
               type="email"
               id="email"
               name="email"
-              // value={formData.email}
-              // onChange={handleChange}
+              value={formData.email}
+              onChange={handleChange}
               required
               className={styles.input}
               aria-label="Enter your email address."
@@ -50,8 +86,8 @@ export default function ContactForm() {
               type="text"
               id="frm-phone"
               name="phone"
-              // value={formData.phone}
-              // onChange={handleChange}
+              value={formData.phone}
+              onChange={handleChange}
               className={styles.input}
               aria-label="Enter your phone number."
             />
@@ -63,8 +99,8 @@ export default function ContactForm() {
             <textarea
               id="message"
               name="message"
-              // value={formData.message}
-              // onChange={handleChange}
+              value={formData.message}
+              onChange={handleChange}
               required
               className={styles.text_area}
               aria-label="Enter your message here."
@@ -79,6 +115,7 @@ export default function ContactForm() {
               Submit
             </Button>
           </div>
+          <div>{status && <p className={styles.disappear}>{status}</p>}</div>
         </div>
       </form>
     </div>
