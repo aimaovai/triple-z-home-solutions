@@ -36,7 +36,6 @@ export default function Footer() {
           </div>
           <div className={styles["vertical-line"]}></div>
 
-          {/* Legal Links */}
           <div className={styles["footer-links"]}>
             <div className={styles["footer-li"]}><Phone /> 346-558-7736</div>
             <div className={styles["footer-li"]}> Triple Z Home Solutions | <CopyrightOutlined /> 2024 | All Rights Reserved</div>
