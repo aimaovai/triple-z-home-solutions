@@ -25,13 +25,13 @@ export default function Footer() {
           {/* Company Links */}
           <div className={styles["footer-links"]}>
             <div className={styles["footer-li"]}>
-              <a href="#">About Us</a>
+              <a href="/about">About Us</a>
             </div>
             <div className={styles["footer-li"]}>
               <a href="/contact-us">Contact</a>
             </div>
             <div className={styles["footer-li"]}>
-              <a href="#">Portfolio</a>
+              <a href="/portfolio">Portfolio</a>
             </div>
           </div>
           <div className={styles["vertical-line"]}></div>
