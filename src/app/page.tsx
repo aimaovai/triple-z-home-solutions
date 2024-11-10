@@ -3,7 +3,7 @@
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer.js";
 import MarqueeCard from "../components/marqueecard/marqueecaard.js";
-import ServiceCard from "../components/servicecard/serviceCard.js";
+import ServiceCard from "../components/servicecard/servicecard.js";
 
 import SectionCard from "../components/sectioncard/sectioncard.js";
 
