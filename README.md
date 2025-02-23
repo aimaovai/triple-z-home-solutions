@@ -20,6 +20,27 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Running the Backend
+
+This project has a backend running on AWS. You can find the backend code in the `backend` directory.
+First, navigate to the `backend` directory and run the following:
+
+```bash
+mvn clean package
+# or
+mvn clean install
+# or
+gradle build
+# or
+./gradlew clean build
+```
+
+Run the application by executing the following command or clicking the "Run" button in your IDE:
+
+```bash
+java -jar .\target\triple-z-0.0.1-SNAPSHOT.jar
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
