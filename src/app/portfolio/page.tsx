@@ -16,7 +16,7 @@ export default function Portfolio() {
   useEffect(() => {
     const fetchImages = async () => {
         try {
-          const response = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL, {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
