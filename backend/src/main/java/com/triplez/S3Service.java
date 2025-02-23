@@ -18,29 +18,36 @@ public class S3Service {
 
     public S3Service() {
         // Load credentials from application.properties
-        String accessKey = ConfigLoader.get("aws.accessKey");
-        String secretKey = ConfigLoader.get("aws.secretKey");
-        String region = ConfigLoader.get("aws.region");
+//        String accessKey = ConfigLoader.get("AWS_ACCESS_KEY");
+//        String secretKey = ConfigLoader.get("AWS_SECRET_ACCESS_KEY");
+        String region = ConfigLoader.get("AWS_REGION");
 
         // Initialize S3Client
+//        this.s3Client = S3Client.builder()
+//                .region(Region.of(region))
+//                .credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(accessKey, secretKey)))
+//                .build();
         this.s3Client = S3Client.builder()
                 .region(Region.of(region))
-                .credentialsProvider(StaticCredentialsProvider.create(AwsBasicCredentials.create(accessKey, secretKey)))
+                .credentialsProvider(DefaultCredentialsProvider.create()) // IAM Role credentials
                 .build();
     }
 
     public List<String> getImageUrls() {
-        String bucketName = ConfigLoader.get("aws.s3.bucketName");
+        String bucketName = ConfigLoader.get("bucketName");
 
         ListObjectsV2Request listRequest = ListObjectsV2Request.builder()
                 .bucket(bucketName)
                 .build(); // No prefix, fetches all objects from the root
 
         ListObjectsV2Response listResponse = s3Client.listObjectsV2(listRequest);
+        List<String> imageExtensions = List.of(".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp", ".tiff", ".svg");
 
         return listResponse.contents()
                 .stream()
                 .map(S3Object::key)
+                .filter(key -> imageExtensions.stream()
+                .anyMatch(ext -> key.toLowerCase().endsWith(ext)))
                 .map(key -> String.format("https://%s.s3.amazonaws.com/%s", bucketName, key))
                 .collect(Collectors.toList());
     }
