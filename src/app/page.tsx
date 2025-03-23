@@ -2,10 +2,9 @@
 
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer.js";
-import MarqueeCard from "../components/marqueecard/marqueecaard.js";
-import ServiceCard from "../components/servicecard/servicecard.js";
 
 import SectionCard from "../components/sectioncard/sectioncard.js";
+import { ArrowBack, ArrowCircleRightOutlined, ArrowForward } from "@mui/icons-material";
 
 export default function Home() {
   const locations = [
@@ -16,83 +15,80 @@ export default function Home() {
     "Katy, Tx",
     "Sugarland, Tx",
   ];
-  const service = [
-    {
-      src: "/images/featured-services/hts.png",
-      description:
-        "Triple Z's Home Theater Installation transforms your space into a cinematic experience with high-definition visuals and immersive surround sound. Our team expertly positions and connects all components, ensuring optimal performance and a clean, polished look. Enjoy seamless entertainment customized just for you!",
-    },
-    {
-      src: "/images/featured-services/tvmount.png",
-      description:
-        "Triple Z's TV Mounting service offers a secure, sleek installation that enhances your viewing experience and maximizes space. Our experts carefully position and mount your TV, managing cables for a clean, modern look. Enjoy the perfect angle and stability with a setup tailored to your room!",
-    },
-    {
-      src: "/images/featured-services/chandinstall.png",
-      description:
-        "Elevate your space with Triple Z's expert Chandelier Installation, adding a stunning focal point to any room. Our team handles secure mounting, precise positioning, and clean wiring for a flawless, polished look. Enjoy a beautifully lit home with safety and style in every detail!",
-    },
-    {
-      src: "/images/featured-services/cabinets.png",
-      description:
-        "Transform your kitchen or bathroom with Triple Z's Cabinet and Fixture Installation service, bringing functionality and style to your space. Our experts ensure precise alignment, secure mounting, and seamless integration of fixtures for a polished, high-quality finish. Enhance your home with cabinetry that’s both beautiful and built to last!",
-    },
-  ];
   return (
     <div className="body">
       <Header />
       <div>
         <div className="content-body">
           <div className="title">Triple Z Home Solutions</div>
-          <div className="marquee">
-            <div>
-              <span>
-                <MarqueeCard src={"/images/marquee/curtains_before.jpg"} />
-              </span>
-              <span>
-                <MarqueeCard src={"/images/marquee/curtains_after.jpg"} />
-              </span>
-              <span>
-                <MarqueeCard src={"/images/marquee/theater_before.jpg"} />
-              </span>
-              <span>
-                <MarqueeCard src={"/images/marquee/theater_after.jpg"} />
-              </span>
-              <span>
-                <MarqueeCard src={"/images/marquee/chand_before.jpg"} />
-              </span>
-              <span>
-                <MarqueeCard src={"/images/marquee/chand_after.jpg"} />
-              </span>
+          <div style={{ display: "flex", justifyContent: "center", height: "fit-content", position: "relative"}}>
+            <VideoComponent/>
+            <div className="overlay">
+              Serving the Greater Houston Area
             </div>
           </div>
-          <SectionCard>
-            <div>
-              <h2 className="h2">Featured Services</h2>
-            </div>
-            {service.map((serviceItem, index) => (
-              <ServiceCard
-                key={index}
-                src={serviceItem.src}
-                description={serviceItem.description}
-              />
-            ))}
-          </SectionCard>
-          <div>
-            <SectionCard>
-              <div>
-                <h2 className="h2">Service Areas</h2>
+          <div style={{ height: "400px", backgroundColor: "black", flexDirection: "row", display: "flex", alignItems: "center" }}>
+            <div style={{ width: "40%", height: "80%", backgroundImage: "url(/images/services/hts.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
+            <div style={{ width: "60%", height: "80%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+              <h1 className="h1">Featured Services</h1>
+              <div style={{ width: "100%", display: "flex", flexDirection: "row", alignSelf: "flex-start", gap: "10px", paddingLeft: "10%" }}>
+                <div style={{ width: "85%", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "10px"}}>
+                  <h2 style={{ color: "white", fontSize: "2rem" }}>Installations</h2>
+                  <text style={{ color: "white", fontSize: "1rem"}}>Home Theater Systems</text>
+                  <text style={{ color: "white", fontSize: "1rem"}}>Reverse Osmosis Systems</text>
+                  <text style={{ color: "white", fontSize: "1rem"}}>TV Mounting</text>
+                </div>
+                <div style={{ width: "fit-content", height: "fit-content", marginTop: "10%", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                  <text style={{ color: "white", fontSize: "1rem", cursor: "pointer", fontStyle: "italic"}} onClick={() => window.location.href = "/services"}>See more <ArrowCircleRightOutlined style={{ width: "20%", height: "10%", color: "white" }}/></text>
+                </div>
               </div>
-              <div className="section-grid">
+            </div>
+          </div>
+          <div style={{ height: "400px", backgroundColor: "white", border: "5px solid black", flexDirection: "row", display: "flex", alignItems: "center" }}>
+            <div style={{ width: "40%", height: "80%", backgroundColor: "black", backgroundSize: "cover", backgroundPosition: "center", color: "white", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+              <h2 className="h2">Service Areas</h2>
+            </div>
+            <div style={{ width: "60%", height: "80%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+              <div style={{ width: "100%", display: "flex", flexDirection: "row", alignSelf: "flex-start", gap: "10px", paddingLeft: "10%" }}>
+              <div className="section-grid" style={{ color: "black" }}>
                 {locations.map((location) => (
                   <div key={location}>{location}</div>
                 ))}
               </div>
-            </SectionCard>
+              </div>
+            </div>
           </div>
+          <SectionCard backgroundColor="white">
+            <div>
+              <h1 className="h1" style={{ color: "black" }}>Testimonials</h1>
+            </div>
+            <div style={{ color: "black", width: "75%", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+              <ArrowBack style={{ width: "5%", height: "5%", color: "black", cursor: "pointer" }} onClick={() => {}}/>
+              <text style={{ color: "black", fontSize: "large", textAlign: "center", padding: "3%"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, delectus rem tenetur reiciendis optio aliquid odio mollitia explicabo, dolore repellat nostrum dicta maxime quia quo iure nemo pariatur inventore odit.</text>
+              <ArrowForward style={{ width: "5%", height: "5%", color: "black", cursor: "pointer" }} onClick={() => {}}/>
+            </div>
+            <div style={{ height: "10px", backgroundColor: "black" }} />
+          </SectionCard>
         </div>
       </div>
       <Footer />
     </div>
   );
 }
+
+const VideoComponent = () => {
+  return (
+    <div style={{ width: '100%', height: 'auto', zIndex: -1 }}>
+      <video 
+        width="100%" 
+        height="auto" 
+        autoPlay 
+        loop 
+        muted
+      >
+        <source src="/videos/20250322_2013_Modern Living Assembly_simple_compose_01jq0ftmjbekh8tmhhjpck51fn.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+};
