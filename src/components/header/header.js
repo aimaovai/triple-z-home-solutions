@@ -5,11 +5,12 @@ import logo from "../../../public/images/logos/logo_1.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import QuoteModal from "../quotemodal/QuoteModal";
 import styles from "./header.module.css";
 
 export default function Header() {
   const [nav, setNav] = useState(false);
-  const onClick = () => alert("Coming Soon!");
+  const [modalOpen, setModalOpen] = useState(false);
   const links = [
     {
       name: "Home",
@@ -86,10 +87,11 @@ export default function Header() {
 
           {/* Get a Quote button */}
           <div className={styles["quote-btn"]}>
-            <button onClick={onClick}>
+            <button onClick={() => setModalOpen(true)}>
               Get a quote
             </button>
           </div>
+          <QuoteModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
       </div>
     </nav>
