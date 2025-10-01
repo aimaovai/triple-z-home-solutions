@@ -28,13 +28,13 @@ export default function Home() {
               Serving the Greater Houston Area
             </div>
           </div>
-          <div style={{ height: "400px", backgroundColor: "black", flexDirection: "row", display: "flex", alignItems: "center" }}>
+          <div className="featured-services-section">
             <div style={{ width: "40%", height: "80%", backgroundImage: "url(/images/services/hts.jpg)", backgroundSize: "cover", backgroundPosition: "center" }} />
-            <div style={{ width: "60%", height: "80%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+            <div className="featured-services">
               <h1 className="h1">Featured Services</h1>
               <div style={{ width: "100%", display: "flex", flexDirection: "row", alignSelf: "flex-start", gap: "10px", paddingLeft: "10%" }}>
                 <div style={{ width: "85%", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "10px"}}>
-                  <h2 style={{ color: "white", fontSize: "2rem" }}>Installations</h2>
+                  <h2 style={{ color: "white" }}>Installations</h2>
                   <text style={{ color: "white", fontSize: "1rem"}}>Home Theater Systems</text>
                   <text style={{ color: "white", fontSize: "1rem"}}>Reverse Osmosis Systems</text>
                   <text style={{ color: "white", fontSize: "1rem"}}>TV Mounting</text>

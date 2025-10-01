@@ -95,6 +95,23 @@ body {
   gap: 10px;
 }
 
+.featured-services-section {
+  height: 400px; 
+  background-color: black;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.featured-services {
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .service-grid {
   display: flex;
   flex-direction: column;
@@ -204,6 +221,10 @@ body {
     grid-template-columns: 1fr;
     font-size: medium;
   }
+
+  .content-body {
+    font-size: xxx-large;
+  }
 }
 
 /* Extra Small Screens (Phones, less than 480px) */
@@ -243,6 +264,10 @@ body {
     height: 100px;
     gap: 5px;
   }
+
+  .content-body {
+    font-size: xx-large;
+  }
 }
 
 /* Very Small Screens (320px and below) */
@@ -272,8 +297,12 @@ body {
     gap: 5px;
   }
 
+  .h1 {
+    font-size: 1.5rem;
+  }
+
   .h2 {
-    font-size: medium;
+    font-size: 1rem;
   }
 
   .section-grid {
@@ -284,5 +313,17 @@ body {
     flex-direction: column;
     height: fit-content;
     gap: 10px;
+  }
+
+  .featured-services-section {
+    flex-direction: column;
+  }
+
+  .featured-services {
+    width: 75%;
+  }
+
+  .content-body {
+    font-size: large;
   }
 }

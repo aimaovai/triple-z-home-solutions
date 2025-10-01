@@ -39,7 +39,7 @@ export default function Footer() {
           <div className={styles["footer-links"]}>
             <div className={styles["footer-li"]}><Phone /> 346-558-7736</div>
             <div className={styles["footer-li"]}> Triple Z Home Solutions | <CopyrightOutlined /> 2024 | All Rights Reserved</div>
-            <div className={styles["footer-li"]}><Instagram /> <Facebook /> {/*<FaTiktok />*/ } </div>
+            <div className={styles["footer-li"]}><Instagram onClick={() => window.open("https://www.instagram.com/triple_z_home_solutions", "_blank")}/> <Facebook onClick={() => window.open("https://www.facebook.com/profile.php?id=100091871924160", "_blank")}/> {/*<FaTiktok />*/ } </div>
           </div>
         </div>
       </div>

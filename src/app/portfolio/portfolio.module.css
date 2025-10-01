@@ -1,8 +1,6 @@
 .container {
-    height: fit-content;
     width: 90%;
-    margin: 20px 0 60px 0;
-    padding: 20px;
+    margin: 20px 0 20px 0;
     justify-self: center;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow:rgba(255, 255, 255, 0.7);
@@ -33,4 +31,13 @@
     flex-direction: row;
     justify-content: end;
     margin: 10px 0;
+}
+
+.slideshowContainer {
+  width: 70%;
+  height: 100px;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
