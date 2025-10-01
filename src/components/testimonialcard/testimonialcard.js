@@ -52,6 +52,7 @@ const Testimonials = () => {
   return (
     <div className={styles["testimonials-carousel"]}>
         <div className="arrows">
+            {/* <button onClick={handlePrevTestimonial}>&lt;</button> */}
             <ArrowBack style={{ height: "100%", margin: "0 20px", color: "black", cursor: "pointer" }} onClick={handlePrevTestimonial}/>
         </div>
       <div className="testimonial">
@@ -67,8 +68,10 @@ const Testimonials = () => {
         <p style={{ whiteSpace: 'pre-wrap', fontSize: '1rem' }}>
           {testimonials[currentIndex].text}
         </p>
+        {/* <ArrowForward style={{ width: "5%", height: "5%", color: "black", cursor: "pointer" }} onClick={() => {}}/> */}
       </div>
       <div className={"arrows"} style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
+        {/* <button onClick={handleNextTestimonial}>&gt;</button> */}
         <ArrowForward style={{ height: "100%", margin: "0 20px", color: "black", cursor: "pointer" }} onClick={handleNextTestimonial}/>
       </div>
     </div>

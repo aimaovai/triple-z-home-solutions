@@ -4,7 +4,8 @@ import Header from "../components/header/header";
 import Footer from "../components/footer/footer.js";
 
 import SectionCard from "../components/sectioncard/sectioncard.js";
-import { ArrowBack, ArrowCircleRightOutlined, ArrowForward } from "@mui/icons-material";
+import { ArrowCircleRightOutlined } from "@mui/icons-material";
+import Testimonials from "../components/testimonialcard/testimonialcard";
 
 export default function Home() {
   const locations = [
@@ -62,10 +63,9 @@ export default function Home() {
             <div>
               <h1 className="h1" style={{ color: "black" }}>Testimonials</h1>
             </div>
-            <div style={{ color: "black", width: "75%", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
-              <ArrowBack style={{ width: "5%", height: "5%", color: "black", cursor: "pointer" }} onClick={() => {}}/>
-              <text style={{ color: "black", fontSize: "large", textAlign: "center", padding: "3%"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, delectus rem tenetur reiciendis optio aliquid odio mollitia explicabo, dolore repellat nostrum dicta maxime quia quo iure nemo pariatur inventore odit.</text>
-              <ArrowForward style={{ width: "5%", height: "5%", color: "black", cursor: "pointer" }} onClick={() => {}}/>
+            <div>
+              {/* <text style={{ color: "black", fontSize: "large", textAlign: "center", padding: "3%"}}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, delectus rem tenetur reiciendis optio aliquid odio mollitia explicabo, dolore repellat nostrum dicta maxime quia quo iure nemo pariatur inventore odit.</text> */}
+              <Testimonials/>
             </div>
             <div style={{ height: "10px", backgroundColor: "black" }} />
           </SectionCard>
