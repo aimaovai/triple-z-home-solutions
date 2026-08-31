@@ -40,7 +40,9 @@ export function ReviewCard({ review }: { review: ReviewCardData }) {
       <blockquote className="flex h-full min-h-[19rem] flex-col rounded-2xl border border-border bg-card p-6 shadow-card">
         <Stars rating={review.rating} size="h-4 w-4" />
 
-        <p className="mt-4 line-clamp-6 flex-1 text-sm leading-relaxed text-charcoal">“{review.quote}”</p>
+        <div className="mt-4 flex-1">
+          <p className="line-clamp-6 text-sm leading-relaxed text-charcoal">“{review.quote}”</p>
+        </div>
 
         {isLong ? (
           <button
