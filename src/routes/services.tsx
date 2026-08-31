@@ -90,42 +90,6 @@ function Services() {
         ))}
       </section>
 
-      <section className="bg-sand py-20">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Popular services</p>
-            <h2 className="mt-3 text-3xl font-extrabold text-navy md:text-4xl">What we get called for most</h2>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {detailedServices.map((service) => (
-              <article
-                key={service.title}
-                className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-card transition-shadow hover:shadow-lift"
-              >
-                <div className="aspect-[16/9] overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-bold text-navy">{service.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{service.body}</p>
-                  <Link
-                    to="/contact"
-                    className="mt-5 text-sm font-bold text-navy transition-colors hover:text-accent"
-                  >
-                    Request a free estimate →
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="mx-auto max-w-3xl px-5 py-20">
         <p className="eyebrow">FAQ</p>
         <h2 className="mt-3 text-3xl font-extrabold text-navy md:text-4xl">Questions we hear a lot</h2>
