@@ -53,6 +53,19 @@ export const Route = createFileRoute("/reviews")({
 });
 
 function Reviews() {
+  const { data: submitted = [], refetch } = useQuery(reviewsQueryOptions);
+
+  const allReviews = [
+    ...submitted.map((r) => ({
+      key: r.id,
+      quote: r.quote,
+      name: r.name,
+      detail: r.detail,
+      rating: r.rating,
+    })),
+    ...reviews.map((r) => ({ key: r.quote, quote: r.quote, name: r.name, detail: r.detail, rating: 5 })),
+  ];
+
   return (
     <>
       <PageHero
