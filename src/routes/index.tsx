@@ -55,7 +55,7 @@ function Home() {
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy-deep/55 to-navy-deep/15" />
-        <div className="relative mx-auto max-w-6xl px-5 py-24 md:py-40">
+        <div className="relative mx-auto max-w-6xl px-5 pt-20 pb-[calc(6rem-15px)] md:pt-32 md:pb-[calc(10rem-15px)]">
           <div className="max-w-2xl fade-up">
             <p className="eyebrow">Serving the greater Houston area</p>
             <h1 className="mt-4 text-4xl font-extrabold leading-[1.05] text-primary-foreground sm:text-5xl md:text-6xl">
