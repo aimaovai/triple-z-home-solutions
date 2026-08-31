@@ -4,6 +4,7 @@ import { BadgeCheck, Star } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { ReviewDialog } from "@/components/site/ReviewDialog";
+import { ReviewCard } from "@/components/site/ReviewCard";
 import { business, images, reviews } from "@/data/site";
 import { listReviews } from "@/lib/reviews.functions";
 
@@ -98,29 +99,9 @@ function Reviews() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
           {allReviews.map((review) => (
-            <blockquote
-              key={review.key}
-              className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-card"
-            >
-              <div className="flex gap-1" aria-label={`${review.rating} out of 5 stars`}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={
-                      i < review.rating ? "h-4 w-4 fill-accent text-accent" : "h-4 w-4 text-muted-foreground/40"
-                    }
-                    aria-hidden
-                  />
-                ))}
-              </div>
-              <p className="mt-4 flex-1 text-sm leading-relaxed text-charcoal">“{review.quote}”</p>
-              <footer className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-                {review.name}
-                {review.detail ? ` · ${review.detail}` : ""}
-              </footer>
-            </blockquote>
+            <ReviewCard key={review.key} review={review} />
           ))}
         </div>
 
