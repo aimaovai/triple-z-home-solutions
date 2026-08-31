@@ -1,4 +1,4 @@
-import heroLivingRoom from "@/assets/tz/hero-living-room.jpg";
+import heroLivingRoom from "@/assets/tz/hero-handshake-wide.jpg";
 import projectAccentWall from "@/assets/tz/project-accent-wall.jpg";
 import projectShelving from "@/assets/tz/project-shelving.jpg";
 import projectLighting from "@/assets/tz/project-lighting.jpg";
