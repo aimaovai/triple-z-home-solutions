@@ -41,7 +41,9 @@ export function ReviewCard({ review }: { review: ReviewCardData }) {
         <Stars rating={review.rating} size="h-4 w-4" />
 
         <div className="mt-4 flex-1">
-          <p className="line-clamp-6 text-sm leading-relaxed text-charcoal">“{review.quote}”</p>
+          <p className="text-sm leading-relaxed text-charcoal">
+            “{isLong ? `${review.quote.slice(0, CLAMP_AT).trimEnd()}…` : review.quote}”
+          </p>
         </div>
 
         {isLong ? (
