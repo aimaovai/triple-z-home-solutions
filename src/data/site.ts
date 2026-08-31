@@ -269,10 +269,6 @@ export const faqs = [
     a: "We can supply materials or install what you've already purchased — whichever saves you money. We'll confirm the plan in your estimate.",
   },
   {
-    q: "Are you licensed and insured?",
-    a: "Yes. We carry insurance on every job and are a verified 5-star Thumbtack Pro serving the greater Houston area.",
-  },
-  {
     q: "What areas do you serve?",
     a: `We serve ${business.areas.join(", ")} and the surrounding Houston area. Just ask if you're nearby.`,
   },
