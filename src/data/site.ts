@@ -98,8 +98,8 @@ export const serviceCards: ServiceCard[] = [
     title: "Electrical",
     blurb: "Light fixtures, ceiling fans, and clean, safe installs that look factory-fitted.",
     bullets: ["Light fixture replacement", "Ceiling fan installs", "Chandelier hanging", "Switch & outlet swaps"],
-    image: serviceCeilingFan,
-    alt: "Technician installing a ceiling fan in a living room",
+    image: serviceTvMounting,
+    alt: "Technician installing a chandelier in a living room",
   },
   {
     slug: "plumbing",
@@ -122,8 +122,8 @@ export const serviceCards: ServiceCard[] = [
     title: "Installations",
     blurb: "TVs, shelving, closets, curtains, cabinets — mounted level, cables hidden.",
     bullets: ["TV mounting", "Custom shelving", "Walk-in closets", "Curtains & wall decor"],
-    image: serviceTvMounting,
-    alt: "Handyman mounting a fixture in a living room",
+    image: serviceHomeTheater,
+    alt: "Mounted TV and home theater setup in a living room",
   },
 ];
 
@@ -202,8 +202,8 @@ export const detailedServices: DetailedService[] = [
   {
     title: "TV Mounting",
     body: "Triple Z's TV Mounting service offers a secure, sleek installation that enhances your viewing experience and maximizes space. Our experts carefully position and mount your TV, managing cables for a clean, modern look. Enjoy the perfect angle and stability with a setup tailored to your room.",
-    image: serviceTvMounting,
-    alt: "Handyman mounting equipment on a living room wall",
+    image: projectAccentWall,
+    alt: "TV mounted on a finished accent wall",
   },
   {
     title: "Reverse Osmosis Drinking Water System",
