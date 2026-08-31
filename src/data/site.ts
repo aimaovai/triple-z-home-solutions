@@ -481,6 +481,12 @@ export const reviews: Review[] = [
     name: "Chase J.",
     detail: "Verified Thumbtack review",
   },
+  {
+    quote:
+      "Triple Z Home Solutions transformed my living room with a stunning accent wall and flawless TV mounting—professional and attentive all the way.",
+    name: "Lisa M.",
+    detail: "Verified Thumbtack review",
+  },
 ];
 
 export const whyChooseUs = [
