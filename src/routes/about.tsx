@@ -131,7 +131,7 @@ function About() {
           </div>
           <div className="mt-8">
             <Link to="/reviews" className="font-bold text-accent">
-              Read all 82 reviews →
+              Read more reviews →
             </Link>
           </div>
         </div>
