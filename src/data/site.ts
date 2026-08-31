@@ -8,6 +8,11 @@ import serviceHomeTheater from "@/assets/tz/service-home-theater.jpg";
 import serviceReverseOsmosis from "@/assets/tz/service-reverse-osmosis.jpg";
 import serviceTvMounting from "@/assets/tz/service-tv-mounting.jpg";
 import projectChandelier from "@/assets/tz/project-chandelier.jpg";
+import projectCeilingFan from "@/assets/tz/project-ceiling-fan.jpg";
+import projectCabinets from "@/assets/tz/project-cabinets.jpg";
+import projectReverseOsmosis from "@/assets/tz/project-reverse-osmosis.jpg";
+import projectCloset from "@/assets/tz/project-closet.jpg";
+import projectCurtains from "@/assets/tz/project-curtains.jpg";
 import serviceWaterFiltration from "@/assets/tz/service-water-filtration.jpg";
 import serviceWallArt from "@/assets/tz/service-wall-art.jpg";
 import serviceCabinets from "@/assets/tz/service-cabinets.jpg";
@@ -320,7 +325,7 @@ export const projects: Project[] = [
     title: "Ceiling Fan Installation",
     category: "Lighting",
     description: "Quiet, balanced ceiling fan swapped in with new bracing and a wall control.",
-    image: serviceCeilingFan,
+    image: projectCeilingFan,
     alt: "Ceiling fan installed in a living room",
   },
   {
@@ -335,14 +340,14 @@ export const projects: Project[] = [
     title: "Kitchen Cabinet Installation",
     category: "Kitchen Upgrades",
     description: "New cabinetry hung level with matched hardware and a clean caulk line.",
-    image: serviceCabinets,
+    image: projectCabinets,
     alt: "Newly installed kitchen cabinets",
   },
   {
     title: "Reverse Osmosis System",
     category: "Kitchen Upgrades",
     description: "Under-sink RO system installed, pressure-tested, and flushed before handoff.",
-    image: serviceReverseOsmosis,
+    image: projectReverseOsmosis,
     alt: "Reverse osmosis drinking water system installed under a sink",
   },
   {
@@ -363,14 +368,14 @@ export const projects: Project[] = [
     title: "Walk-In Closet System",
     category: "Furniture Assembly",
     description: "Custom shelving and hanging rods laid out for real, everyday storage.",
-    image: serviceCloset,
+    image: projectCloset,
     alt: "Walk-in closet with custom shelving",
   },
   {
     title: "Curtains & Wall Decor",
     category: "Furniture Assembly",
     description: "Rods measured and mounted level, artwork hung and aligned across the wall.",
-    image: serviceCurtains,
+    image: projectCurtains,
     alt: "Curtains installed in a residential room",
   },
 ];
