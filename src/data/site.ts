@@ -399,37 +399,87 @@ export type Review = {
 export const reviews: Review[] = [
   {
     quote:
-      "Adding the perfect finishing touch to a room or transforming an entire space — they handled it with precision and care from start to finish.",
-    name: "Verified Thumbtack customer",
-    detail: "Remodeling · Houston",
+      "I hired Triple Z to do some fan, RO, and light bulb installation. He finished his work to perfection. He's our go-to guy for any future work in our house. His price was reasonable, and he was very pleasant to work with.",
+    name: "Malar J.",
+    detail: "Verified Thumbtack review",
   },
   {
     quote:
-      "Dependable service, transparent pricing, and quality craftsmanship. Exactly what they promise on their site is what we got.",
-    name: "Verified Thumbtack customer",
-    detail: "Handyman services · Houston",
+      "We originally hired for ceiling fan installation and ended up needing his services for additional projects in our new construction home. He installed hardware on our kitchen cabinets and bathrooms, an alkaline water filtration system in the kitchen, surround sound for our pre-wired speaker system, and he built extra wood shelves for one of our hall closets so we could maximize the space. I don't have pictures of all the work, only because it was all excellent work! Was nice not to have to hire several people to come in and out of the house. Would hire him ten times over.",
+    name: "Lisa A.",
+    detail: "Verified Thumbtack review",
   },
   {
     quote:
-      "Every project, big or small, was handled with professionalism and attention to detail. The results have held up beautifully.",
-    name: "Verified Thumbtack customer",
-    detail: "Installations · Katy",
-  },
-  {
-    quote: "A true 5-star experience. Reliable, skilled, and genuinely easy to work with.",
-    name: "Verified Thumbtack customer",
-    detail: "Repairs · Cypress",
+      "Triple Z provided top-notch service for our ceiling fan installation. They were professional, arrived on time, and came prepared with all the necessary tools and equipment. They did a great job installing multiple ceiling fans in our home, paying close attention to detail, and working meticulously. I highly recommend Triple Z for anyone needing ceiling fan installation. Their skills, customer service, and value are unbeatable.",
+    name: "Scott T.",
+    detail: "Verified Thumbtack review",
   },
   {
     quote:
-      "Gave us peace of mind and confidence in the work delivered. They showed up when they said they would and finished clean.",
-    name: "Verified Thumbtack customer",
-    detail: "Remodeling · Sugar Land",
+      "We had two chandeliers replaced and Triple Z did a great job! He checked with me on exactly how I wanted it hung and gave recommendations on the light bulbs. Really thrilled with the work!",
+    name: "Camilla T.",
+    detail: "Verified Thumbtack review",
   },
   {
-    quote: "Functional, stylish, and comfortable — our space finally works the way we needed it to.",
-    name: "Verified Thumbtack customer",
-    detail: "Custom builds · Richmond",
+    quote:
+      "Awesome experience. This company is going places!! Consummate professional with a great attitude. I highly recommend and will definitely be using them to complete other projects in my home. You won't be disappointed.",
+    name: "Daymon M.",
+    detail: "Verified Thumbtack review",
+  },
+  {
+    quote:
+      "Triple Z did an excellent job! I really appreciate him being able to come out to do the work even though bad weather had been in the area! I will recommend their services again if needed!",
+    name: "Michael W.",
+    detail: "Verified Thumbtack review",
+  },
+  {
+    quote:
+      "Excellent honest work. Definitely a permanent contact for my household improvements, or fixes. Installed my kitchen faucet, alkaline water filter system, fixed a drawer that was off track, and fixed my front door.",
+    name: "Brittany M.",
+    detail: "Verified Thumbtack review",
+  },
+  {
+    quote:
+      "Triple Z came in to assemble our office furniture, and they did an amazing job! Despite some of the furniture pieces being the wrong sizes, the team was super resourceful and managed to get everything assembled perfectly. Their problem-solving skills and professionalism really stood out, ensuring that our office setup was completed smoothly. I highly recommend them for their adaptability and dedication to getting the job done!",
+    name: "Taylor L.",
+    detail: "Thumbtack review",
+  },
+  {
+    quote:
+      "This guy knows what he is doing. Very professional and great customer service. Hung my bedroom TV like the pro he is, despite the obstruction in the ceiling design. Now I enjoy watching TV in my bedroom while sitting or laying on my bed! I will be using this company for all of my home projects going forward. Thanks for an excellent work delivery.",
+    name: "Queenbee O.",
+    detail: "Thumbtack review",
+  },
+  {
+    quote:
+      "Working with Triple Z Home Solutions has been an absolute pleasure! Their expertise and professionalism have exceeded my expectations. From the moment I reached out, they were responsive and attentive, taking the time to understand my needs and providing valuable insights. Their attention to detail, creativity, and problem-solving skills were evident throughout the entire process. The end result was nothing short of outstanding! I highly recommend Triple Z Home Solutions for their exceptional talent and dedication. I look forward to working with them again in the future.",
+    name: "Kemi A.",
+    detail: "Thumbtack review",
+  },
+  {
+    quote:
+      "Bisi is a great guy, he knows what he is doing. Great knowledge about home theater systems. I would always recommend Bisi to all my friends and family for home theatre related work.",
+    name: "Sean S.",
+    detail: "Thumbtack review",
+  },
+  {
+    quote:
+      "Triple Z is a professional doctor of all repairs and installations! One credible fact about this service provider is that they go above and beyond to ensure that they provide Grade A service for their customers. I'm very satisfied with the job they did at my home. Honestly, you can't have it better elsewhere! They are all that you can wish and ask for when it comes to handy jobs! They are very affordable too!!",
+    name: "Jay I.",
+    detail: "Thumbtack review",
+  },
+  {
+    quote:
+      "Extremely helpful and resourceful! Responsiveness/communication was great. Put my furniture together quick and it looks incredible. Can't thank you enough!",
+    name: "Olivia L.",
+    detail: "Verified Thumbtack review",
+  },
+  {
+    quote:
+      "Great communication and precision to detail with handling and hanging a portrait I needed hung in a difficult space (staircase). Will definitely use again and recommend.",
+    name: "Chase J.",
+    detail: "Verified Thumbtack review",
   },
 ];
 
