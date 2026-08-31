@@ -1,10 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { queryOptions, useQuery } from "@tanstack/react-query";
 import { BadgeCheck, Star } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBanner } from "@/components/site/CtaBanner";
+import { ReviewDialog } from "@/components/site/ReviewDialog";
 import { business, images, reviews } from "@/data/site";
+import { listReviews } from "@/lib/reviews.functions";
+
+const reviewsQueryOptions = queryOptions({
+  queryKey: ["site-reviews"],
+  queryFn: () => listReviews(),
+});
 
 export const Route = createFileRoute("/reviews")({
+  loader: ({ context }) => context.queryClient.ensureQueryData(reviewsQueryOptions),
+  errorComponent: () => (
+    <div className="mx-auto max-w-2xl px-5 py-24 text-center text-muted-foreground">
+      We couldn't load reviews right now. Please refresh the page.
+    </div>
+  ),
+  notFoundComponent: () => (
+    <div className="mx-auto max-w-2xl px-5 py-24 text-center text-muted-foreground">Page not found.</div>
+  ),
   head: () => ({
     meta: [
       { title: "Customer Reviews | Triple Z Home Solutions Houston" },
@@ -36,6 +53,19 @@ export const Route = createFileRoute("/reviews")({
 });
 
 function Reviews() {
+  const { data: submitted = [], refetch } = useQuery(reviewsQueryOptions);
+
+  const allReviews = [
+    ...submitted.map((r) => ({
+      key: r.id,
+      quote: r.quote,
+      name: r.name,
+      detail: r.detail,
+      rating: r.rating,
+    })),
+    ...reviews.map((r) => ({ key: r.quote, quote: r.quote, name: r.name, detail: r.detail, rating: 5 })),
+  ];
+
   return (
     <>
       <PageHero
@@ -69,19 +99,26 @@ function Reviews() {
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review) => (
+          {allReviews.map((review) => (
             <blockquote
-              key={review.quote}
+              key={review.key}
               className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-card"
             >
-              <div className="flex gap-1" aria-label="5 out of 5 stars">
+              <div className="flex gap-1" aria-label={`${review.rating} out of 5 stars`}>
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent text-accent" aria-hidden />
+                  <Star
+                    key={i}
+                    className={
+                      i < review.rating ? "h-4 w-4 fill-accent text-accent" : "h-4 w-4 text-muted-foreground/40"
+                    }
+                    aria-hidden
+                  />
                 ))}
               </div>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-charcoal">“{review.quote}”</p>
               <footer className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-                {review.name} · {review.detail}
+                {review.name}
+                {review.detail ? ` · ${review.detail}` : ""}
               </footer>
             </blockquote>
           ))}
@@ -89,11 +126,7 @@ function Reviews() {
 
         <div className="mt-10 rounded-2xl border border-dashed border-border bg-secondary p-6 text-center">
           <p className="text-sm text-muted-foreground">
-            Worked with us before?{" "}
-            <a href={business.emailHref} className="font-bold text-navy hover:text-accent">
-              Send us your review
-            </a>{" "}
-            and we'll add it here.
+            Worked with us before? <ReviewDialog onSubmitted={() => void refetch()} /> and we'll add it here.
           </p>
         </div>
 
