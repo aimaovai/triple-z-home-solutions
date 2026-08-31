@@ -51,7 +51,7 @@ function Home() {
           src={images.heroLivingRoom}
           alt="Triple Z Home Solutions technician greeting a homeowner in Houston"
           className="absolute inset-0 h-full w-full object-cover opacity-90"
-          style={{ objectPosition: "58% top", transform: "scale(1.45)", transformOrigin: "58% top" }}
+          style={{ objectPosition: "58% top", transform: "scale(1.22)", transformOrigin: "58% top" }}
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy-deep/55 to-navy-deep/15" />
