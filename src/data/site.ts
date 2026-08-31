@@ -490,7 +490,7 @@ export const reviews: Review[] = [
 ];
 
 export const whyChooseUs = [
-  { title: "Licensed & Insured", body: "Covered on every job, residential or commercial." },
+  { title: "Residential & Commercial", body: "One crew for homes, offices, and rental turnovers." },
   { title: "5-Star Rated", body: "82 reviews and a perfect 5.0 rating on Thumbtack." },
   { title: "Fast Response", body: "We answer quotes within 24 hours, most within a few." },
   { title: "Transparent Pricing", body: "A clear estimate up front. No surprise line items." },

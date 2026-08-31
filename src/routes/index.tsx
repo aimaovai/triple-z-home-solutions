@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Reliable handyman and remodeling services across Houston, Katy, Cypress, Sugar Land, Richmond and Fulshear. 5-star rated, licensed and insured. Free estimates.",
+          "Reliable handyman and remodeling services across Houston, Katy, Cypress, Sugar Land, Richmond and Fulshear. 5-star rated with free estimates.",
       },
       { property: "og:title", content: "Houston Handyman & Remodeling | Triple Z Home Solutions" },
       {
