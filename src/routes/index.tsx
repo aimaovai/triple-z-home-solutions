@@ -50,7 +50,7 @@ function Home() {
         <img
           src={images.heroLivingRoom}
           alt="Triple Z Home Solutions technician greeting a homeowner in Houston"
-          className="absolute inset-0 h-full w-full object-cover object-[60%_top] opacity-90"
+          className="absolute inset-0 h-full w-full object-cover object-top opacity-90 scale-[1.45] origin-top"
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy-deep/55 to-navy-deep/15" />
