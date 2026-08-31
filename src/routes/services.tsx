@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBanner } from "@/components/site/CtaBanner";
-import { detailedServices, faqs, images, tiers } from "@/data/site";
+import { faqs, images, tiers } from "@/data/site";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
