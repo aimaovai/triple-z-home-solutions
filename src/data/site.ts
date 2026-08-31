@@ -7,6 +7,7 @@ import ownerPortrait from "@/assets/tz/owner-portrait.jpg";
 import serviceHomeTheater from "@/assets/tz/service-home-theater.jpg";
 import serviceReverseOsmosis from "@/assets/tz/service-reverse-osmosis.jpg";
 import serviceTvMounting from "@/assets/tz/service-tv-mounting.jpg";
+import projectChandelier from "@/assets/tz/project-chandelier.jpg";
 import serviceWaterFiltration from "@/assets/tz/service-water-filtration.jpg";
 import serviceWallArt from "@/assets/tz/service-wall-art.jpg";
 import serviceCabinets from "@/assets/tz/service-cabinets.jpg";
@@ -98,7 +99,7 @@ export const serviceCards: ServiceCard[] = [
     title: "Electrical",
     blurb: "Light fixtures, ceiling fans, and clean, safe installs that look factory-fitted.",
     bullets: ["Light fixture replacement", "Ceiling fan installs", "Chandelier hanging", "Switch & outlet swaps"],
-    image: serviceTvMounting,
+    image: projectChandelier,
     alt: "Technician installing a chandelier in a living room",
   },
   {
@@ -312,7 +313,7 @@ export const projects: Project[] = [
     title: "Chandelier & Fixture Hanging",
     category: "Lighting",
     description: "Statement chandelier hung, balanced, and wired to a dimmer for evening light.",
-    image: serviceTvMounting,
+    image: projectChandelier,
     alt: "Chandelier being installed in a living room",
   },
   {
