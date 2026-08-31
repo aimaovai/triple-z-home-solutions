@@ -4,6 +4,7 @@ import { BadgeCheck, Star } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBanner } from "@/components/site/CtaBanner";
 import { ReviewDialog } from "@/components/site/ReviewDialog";
+import { ReviewCard } from "@/components/site/ReviewCard";
 import { business, images, reviews } from "@/data/site";
 import { listReviews } from "@/lib/reviews.functions";
 
