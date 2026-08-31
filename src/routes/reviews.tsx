@@ -1,10 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { queryOptions, useQuery } from "@tanstack/react-query";
 import { BadgeCheck, Star } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { CtaBanner } from "@/components/site/CtaBanner";
+import { ReviewDialog } from "@/components/site/ReviewDialog";
 import { business, images, reviews } from "@/data/site";
+import { listReviews } from "@/lib/reviews.functions";
+
+const reviewsQueryOptions = queryOptions({
+  queryKey: ["site-reviews"],
+  queryFn: () => listReviews(),
+});
 
 export const Route = createFileRoute("/reviews")({
+  loader: ({ context }) => context.queryClient.ensureQueryData(reviewsQueryOptions),
+  errorComponent: () => (
+    <div className="mx-auto max-w-2xl px-5 py-24 text-center text-muted-foreground">
+      We couldn't load reviews right now. Please refresh the page.
+    </div>
+  ),
+  notFoundComponent: () => (
+    <div className="mx-auto max-w-2xl px-5 py-24 text-center text-muted-foreground">Page not found.</div>
+  ),
   head: () => ({
     meta: [
       { title: "Customer Reviews | Triple Z Home Solutions Houston" },
