@@ -50,11 +50,11 @@ function Home() {
         <img
           src={images.heroLivingRoom}
           alt="Triple Z Home Solutions technician greeting a homeowner in Houston"
-          className="absolute inset-0 h-full w-full object-cover object-[center_35%] opacity-90"
+          className="absolute inset-0 h-full w-full object-cover object-[62%_center] opacity-90"
           fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/85 via-navy-deep/55 to-navy-deep/15" />
-        <div className="relative mx-auto max-w-6xl px-5 py-24 md:py-36">
+        <div className="relative mx-auto max-w-6xl px-5 py-28 md:py-44">
           <div className="max-w-2xl fade-up">
             <p className="eyebrow">Serving the greater Houston area</p>
             <h1 className="mt-4 text-4xl font-extrabold leading-[1.05] text-primary-foreground sm:text-5xl md:text-6xl">
